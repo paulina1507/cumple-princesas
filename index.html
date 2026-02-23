@@ -1,55 +1,117 @@
 <!doctype html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Invitación Princesa</title>
-  <link rel="stylesheet" href="assets/styles.css"/>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
+  <div class="particles"></div>
+  <div id="introScreen" class="intro-screen">
+    <div class="intro-content">
+      <h1 class="intro-title">Nasya Mailen</h1>
+      <p>Toca para comenzar la invitación ✨</p>
+    </div>
+  </div>
   <div class="slider">
 
-    <section class="slide active">
-      <h1>👑</h1>
-      <h2>¡Estás invitad@!</h2>
-      <p>Al cumpleaños de</p>
-      <div class="name">Sofía</div>
-      <p class="desc">Una fiesta mágica de princesas ✨</p>
+    <section class="slide hero-princesa">
+      <img src="assets/img/castillo.png" class="castillo">
+      <div class="hero-texto">
+        <h2 class="subtitulo">LA PRINCESA</h2>
+        <h1 class="nombre-princesa">Nasya Mailen</h1>
+        <div class="cumple-linea">
+          <span class="linea"></span>
+          <span class="cumple-texto">Cumple</span>
+          <span class="numero">3</span>
+          <span class="anitos">Añitos</span>
+          <span class="linea"></span>
+        </div>
+
+      </div>
+      <div class="princesas">
+        <img src="assets/img/aurora.png" class="princesa p1">
+        <img src="assets/img/ariel.png" class="princesa p2">
+        <img src="assets/img/bella.png" class="princesa p3">
+        <img src="assets/img/tiana.png" class="princesa p4">
+        <img src="assets/img/cenicienta.png" class="princesa p5">
+      </div>
+    </section>
+
+    <section class="slide ceremonia">
+      <h2>Ceremonia & Recepción</h2>
+      <div class="marco-espejo">
+
+        <img src="assets/img/espejo.png" class="espejo">
+
+        <div class="contenido-ceremonia">
+          <div class="bloque">
+            <h3>Misa</h3>
+            <p>3:00 PM</p>
+            <a class="btn" target="_blank" href="https://maps.google.com/?q=Parroquia+San+Miguel">
+              Ver iglesia
+            </a>
+          </div>
+
+          <div class="bloque">
+            <h3>Recepción</h3>
+            <p>4:00 PM</p>
+            <a class="btn" target="_blank"
+              href="https://www.google.com/maps?q=19.21384048461914,-98.2447738647461&z=17&hl=es">
+              Ver ubicación
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <img src="assets/img/rapunzel.png" class="decoracion izquierda">
+      <img src="assets/img/jazmin.png" class="decoracion derecha">
+
     </section>
 
     <section class="slide">
-      <h2>📅 Detalles</h2>
-      <p><strong>Fecha:</strong> Sábado 10 de mayo</p>
-      <p><strong>Hora:</strong> 4:30 PM</p>
-      <p><strong>Celebramos:</strong> 7 años 🎉</p>
-      <p><strong>Dress Code:</strong> Princesas / Rosa ✨</p>
+      <h2>Galería</h2>
+      <div class="galeria">
+        <img src="assets/img/foto1.jpg">
+        <img src="assets/img/foto2.jpg">
+        <img src="assets/img/foto3.jpg">
+        <img src="assets/img/foto4.jpg">
+        <img src="assets/img/foto5.jpg">
+        <img src="assets/img/foto6.jpg">
+      </div>
     </section>
 
-    <section class="slide">
-      <h2>📍 Ubicación</h2>
-      <p>Salón Jardín Encantado</p>
-      <p>Av. Las Flores 123, Puebla</p>
+    <section class="slide invitacion-final">
 
-      <a class="btn"
-         target="_blank"
-         href="https://maps.google.com/?q=Av.+Las+Flores+123+Puebla">
-         Ver ubicación
-      </a>
+      <div class="contenido-final">
+
+        <h2>Estás invitado</h2>
+
+        <p>
+          Será un día muy especial y nos encantará
+          compartirlo contigo ✨
+        </p>
+
+        <p>
+          Confirma tu asistencia y acompáñanos
+          a celebrar este momento mágico.
+        </p>
+
+        <a class="btn" target="_blank" id="waLink">
+          Confirmar asistencia
+        </a>
+
+        <img src="assets/img/blancanieves.png" class="princesa-final">
+
+      </div>
+
     </section>
-
-    <section class="slide">
-      <h2>✅ Confirmación</h2>
-      <p>Confirma por WhatsApp 😊</p>
-
-      <a class="btn"
-         target="_blank"
-         id="waLink">
-         Confirmar asistencia 💬
-      </a>
-    </section>
-
   </div>
 
   <div class="nav">
@@ -58,6 +120,18 @@
     <button id="next">→</button>
   </div>
 
-  <script src="assets/script.js"></script>
+  <audio id="bgMusic" loop>
+    <source src="assets/audio/musica.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="musicBtn" class="music-btn">
+    <img id="musicIcon" src="assets/img/play.svg" alt="music">
+  </button>
+  <div class="lightbox" id="lightbox">
+    <span class="cerrar" id="cerrar">&times;</span>
+    <img class="lightbox-img" id="lightbox-img">
+  </div>
+  <script src="assets/js/script.js"></script>
 </body>
+
 </html>
