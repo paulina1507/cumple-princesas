@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // WhatsApp link dinámico
-  const waNumber = "522212706617";
+  const waNumber = "522461700983";
   const waMessage = "¡Hola! Confirmo con mucha emoción mi asistencia al cumpleaños de Nasya Mailen ¡Nos vemos en su gran día!";
 
   document.getElementById("waLink").href =
