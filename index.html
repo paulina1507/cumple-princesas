@@ -33,6 +33,24 @@
           <span class="anitos">Añitos</span>
           <span class="linea"></span>
         </div>
+        <div class="contador-regresivo">
+          <div class="tiempo">
+            <span id="dias">00</span>
+            <p>Días</p>
+          </div>
+          <div class="tiempo">
+            <span id="horas">00</span>
+            <p>Horas</p>
+          </div>
+          <div class="tiempo">
+            <span id="minutos">00</span>
+            <p>Min</p>
+          </div>
+          <div class="tiempo">
+            <span id="segundos">00</span>
+            <p>Seg</p>
+          </div>
+        </div>
 
       </div>
       <div class="princesas">
@@ -62,8 +80,7 @@
           <div class="bloque">
             <h3>Recepción</h3>
             <p>4:00 PM</p>
-            <a class="btn" target="_blank"
-              href="https://maps.app.goo.gl/EC8d5vzYkGZ7xyTCA">
+            <a class="btn" target="_blank" href="https://maps.app.goo.gl/E1j6KrmLGQ7c9ZoB6?g_st=iw">
               Ver ubicación
             </a>
           </div>
@@ -77,7 +94,7 @@
     </section>
 
     <section class="slide">
-      <h2>Galería</h2>
+      <h2>Momentos especiales</h2>
       <div class="galeria">
         <img src="assets/img/foto1.jpg">
         <img src="assets/img/foto2.jpg">
@@ -93,7 +110,9 @@
       <div class="contenido-final">
 
         <h2>Estás invitado</h2>
-
+        <p class="fecha-final">
+          Sábado 28 de Marzo 2026<br>
+        </p>
         <p>
           Será un día muy especial y nos encantará
           compartirlo contigo ✨
@@ -144,7 +163,7 @@
     <button id="next">→</button>
   </div>
 
-  <audio id="bgMusic" loop>
+  <audio id="bgMusic" loop preload="auto" playsinline>
     <source src="assets/audio/musica.mp3" type="audio/mpeg">
   </audio>
 
@@ -152,8 +171,12 @@
     <img id="musicIcon" src="assets/img/play.svg" alt="music">
   </button>
   <div class="lightbox" id="lightbox">
+    <button class="lb-arrow lb-prev" id="lbPrev" aria-label="Anterior">‹</button>
+
     <span class="cerrar" id="cerrar">&times;</span>
-    <img class="lightbox-img" id="lightbox-img">
+    <img class="lightbox-img" id="lightbox-img" alt="Foto">
+
+    <button class="lb-arrow lb-next" id="lbNext" aria-label="Siguiente">›</button>
   </div>
   <script src="assets/js/script.js?v=2"></script>
 </body>
